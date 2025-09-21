@@ -1,9 +1,7 @@
 from newspaper import Article
 from serpapi import GoogleSearch
 import os
-from dotenv import load_dotenv  # <-- ADD THIS LINE
 
-load_dotenv()  # <-- AND ADD THIS LINE to load variables from .env
 
 # Function to fetch and parse article text
 def fetch_article_text(url: str) -> str:
@@ -56,5 +54,14 @@ def collect_data(topic: str):
         if text:
             all_text += text + "\n"
     return all_text
+
+# from dotenv import load_dotenv  
+
+# load_dotenv()  #  to load variables from .env
+
+# if __name__ == "__main__":
+#     topic = input("Enter a topic: ")
+#     data = collect_data(topic)
+#     print(data)
 
 

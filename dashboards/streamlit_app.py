@@ -10,6 +10,21 @@ from agents.knowledge_agent import answer_question
 
 st.title("🌟 AMRA - Text Research Assistant 🌟")
 
+
+
+uploaded_file = st.file_uploader("Upload a PDF")
+if uploaded_file is not None:
+    import pdfplumber
+    text = ""
+    with pdfplumber.open(uploaded_file) as pdf:
+        for page in pdf.pages:
+            text += page.extract_text() + "\n"
+    summary = summarize_text(text)
+    index = create_vector_index(text)
+    st.write("### Summary:")
+    st.write(summary)
+    st.session_state['index'] = index
+
 # Initialize session_state for index if not exists
 if 'index' not in st.session_state:
     st.session_state['index'] = None

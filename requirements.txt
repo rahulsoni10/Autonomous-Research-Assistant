@@ -17,3 +17,6 @@ faiss-cpu
 
 # For OpenAI models and embeddings
 openai
+
+pypdf2 
+pdfplumber

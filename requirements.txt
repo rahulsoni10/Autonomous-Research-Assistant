@@ -1,6 +1,10 @@
 
 fastapi
 streamlit
+newspaper3k
+lxml_html_clean
+google-search-results
+
 
 # For API key management
 python-dotenv
@@ -11,6 +15,10 @@ langchain-openai
 langchain-community
 langchain-core
 langchain-text-splitters
+
+llama-index
+llama-index-llms-openai
+llama-index-embeddings-openai
 
 # For creating the vector store
 faiss-cpu

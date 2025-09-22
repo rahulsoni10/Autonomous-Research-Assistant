@@ -1,3 +1,6 @@
+import set_proxy
+
+
 import sys, os
 import streamlit as st
 

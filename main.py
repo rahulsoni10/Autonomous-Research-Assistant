@@ -1,3 +1,9 @@
+import set_proxy
+
+import os
+
+print(os.environ['http_proxy'])
+
 from agents.data_collector import collect_data
 from agents.analyzer import summarize_text, create_vector_index
 from agents.knowledge_agent import answer_question

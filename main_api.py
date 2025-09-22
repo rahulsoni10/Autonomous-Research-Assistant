@@ -1,3 +1,6 @@
+import set_proxy
+
+
 from fastapi import FastAPI
 from pydantic import BaseModel
 from agents.data_collector import collect_data

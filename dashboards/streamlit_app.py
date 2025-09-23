@@ -1,11 +1,13 @@
-import set_proxy
-
 
 import sys, os
 import streamlit as st
 
 # add project root (one directory up) to sys.path
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+
+import set_proxy 
+
+
 
 from agents.data_collector import collect_data
 from agents.analyzer import summarize_text, create_vector_index

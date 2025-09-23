@@ -4,8 +4,6 @@ import os
 import pdfplumber
 from pathlib import Path
 
-
-
 # Function to fetch and parse article text
 def fetch_article_text(url: str) -> str:
     try:

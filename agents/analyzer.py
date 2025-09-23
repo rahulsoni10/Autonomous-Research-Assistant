@@ -19,7 +19,7 @@ if not os.getenv("OPENAI_API_KEY"):
 
 # Configure LlamaIndex global settings for LLM and embedding models
 # This is the modern way to configure models for LlamaIndex
-Settings.llm = OpenAI(model="gpt-4", temperature=0.1)
+Settings.llm = OpenAI(model="gpt-3.5-turbo", temperature=0.1)
 Settings.embed_model = OpenAIEmbedding()
 
 
@@ -32,7 +32,7 @@ def summarize_text(text: str) -> str:
     print("--- Summarizing Text ---")
     
     # Define the LLM for LangChain (can be different from LlamaIndex's)
-    langchain_llm = ChatOpenAI(model="gpt-4", temperature=0)
+    langchain_llm = ChatOpenAI(model="gpt-3.5-turbo", temperature=0)
     
     # Create a prompt template
     prompt_template = ChatPromptTemplate.from_template(
